@@ -1,0 +1,69 @@
+{
+  "contacts": [
+    {
+      "id": "c1",
+      "Name": "It Vedant",
+      "Company": "ItVedant Education Pvt. Ltd.",
+      "Email": "itvedant@gmail.com",
+      "Title": "Student",
+      "Mobile": "8765432109",
+      "Photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT342e23biRPJ--SbdBs4maoDSkibS3h1785A&usqp=CAU",
+      "groupId": "2"
+    },
+    {
+      "id": "c2",
+      "Name": "Sagar Jaiswal",
+      "Company": "ItVedant Education Pvt. Ltd.",
+      "Email": "sagar@gmail.com",
+      "Title": "Co-Ordinater",
+      "Mobile": "8565432109",
+      "Photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT342e23biRPJ--SbdBs4maoDSkibS3h1785A&usqp=CAU",
+      "groupId": "2"
+    },
+    {
+      "id": "c3",
+      "Name": "Manoj Joshi",
+      "Company": "ItVedant Education Pvt. Ltd.",
+      "Email": "manoj@gmail.com",
+      "Title": "Teacher",
+      "Mobile": "8767432109",
+      "Photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT342e23biRPJ--SbdBs4maoDSkibS3h1785A&usqp=CAU",
+      "groupId": "2"
+    },
+    {
+      "id": "c4",
+      "Name": "Rohit Jaiswal",
+      "Company": "ItVedant Education Pvt. Ltd.",
+      "Email": "rohit@gmail.com",
+      "Title": "Mentor",
+      "Mobile": "8765431109",
+      "Photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT342e23biRPJ--SbdBs4maoDSkibS3h1785A&usqp=CAU",
+      "groupId": "2"
+    },
+    {
+      "id": "S050I1m"
+    }
+  ],
+  "groups": [
+    {
+      "Id": "1",
+      "Name": "Company"
+    },
+    {
+      "Id": "2",
+      "Name": "Class"
+    },
+    {
+      "Id": "3",
+      "Name": "Family"
+    },
+    {
+      "Id": "4",
+      "Name": "Friends"
+    },
+    {
+      "Id": "5",
+      "Name": "Service"
+    }
+  ]
+}

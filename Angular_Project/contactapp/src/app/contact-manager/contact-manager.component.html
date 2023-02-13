@@ -1,0 +1,70 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <p class="h3">My Contact Application
+                <a class="btn btn-success btn-sm" href="/contacts/add"><i class="fa fa-plus-circle">&nbsp;</i>Add New</a>
+            </p>
+            <p class="fst-italic mt-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quisquam, voluptate, magni explicabo molestias harum laboriosam assumenda vitae, ad enim magnam laudantium ex omnis at totam aut mollitia quae a! Ullam eveniet nostrum architecto? A, culpa. Possimus voluptatibus labore, quas asperiores in, voluptas soluta tempore molestias quam numquam exercitationem? Minima illo nostrum ipsa nihil in nemo reiciendis ea nobis natus!</p>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Search Contact">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-outline-dark" value="search">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Condition based loading -->
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!-- Display Error Messages -->
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- <pre>{{contacts | json}}</pre> -->
+<!-- card design -->
+<div class="container mt-4" *ngIf="!loading && contacts.length > 0">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let contact of contacts"> 
+            <div class="card list-group-item-success shadow-lg my-2">
+                <div class="card-body">
+                    <div class="row align-item-center">
+                        <div class="col-sm-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="user" class="contact-img">
+                        </div>
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">Name: 
+                                    <span class="fw-bold">{{contact.Name}}</span>
+                                </li>
+                                <li class="list-group-item">Email: 
+                                    <span class="fw-bold">{{contact.Email}}</span>
+                                </li>
+                                <li class="list-group-item">Mobile: 
+                                    <span class="fw-bold">{{contact.Mobile}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+                            <a routerLink="/contacts/view/{{contact.id}}" class="btn btn-warming"><i class="fa fa-eye"></i></a>
+                            <a routerLink="/contacts/edit/{{contact.id}}" class="btn btn-success"><i class="fa fa-pen"></i></a>
+                            <button class="btn btn-danger" (click)="deleteContact(contact.id)"><i class="fa fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
